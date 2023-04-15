@@ -6,6 +6,7 @@ import CreateNotes from './components/CreateNotes';
 
 import { Note } from './models/note.model';
 import { Col, Container, Row } from 'react-bootstrap';
+import BookCard from './components/BookCard';
 
 function App() {
 
@@ -20,8 +21,8 @@ function App() {
 
   return (
     <>
-      <Header/>
       <Container className='mt-5'>
+        <BookCard/>
         <Row>
           <Col>
             <NotesList notes={ notes } setNotes={ setNotes }/>

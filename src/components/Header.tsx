@@ -1,21 +1,27 @@
 //  tsrsfc
 
 import * as React from 'react';
-import { Container, Navbar } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
-interface IHeaderProps {
+function ColorSchemesExample() {
+    return (
+        <>
+            <Navbar bg="info" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">BiB</Navbar.Brand>
+                    <Nav>
+                        <Nav.Link href="#home">Inicio</Nav.Link>
+                        <Nav.Link href="#features">Ver Libro</Nav.Link>
+                        <Nav.Link href="#pricing">Registro de estudiante</Nav.Link>
+                        <Nav.Link href="#pricing">Registro de libro</Nav.Link>
+                        <Nav.Link href="#pricing">Cerrar Sesión</Nav.Link>                    
+                    </Nav>
+                </Container>
+            </Navbar>
+
+        </>
+    );
 }
 
-const Header: React.FunctionComponent<IHeaderProps> = (props) => {
-    return (
-        <Navbar fixed="top" bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand>
-                    React Typescript Bootstrap Tutorial
-                </Navbar.Brand>
-            </Container>
-        </Navbar>
-    ) ;   
-};
-
-export default Header;
+export default ColorSchemesExample;
